@@ -3,6 +3,7 @@
 const help = require(`./help`);
 const generate = require(`./generate`);
 const version = require(`./version`);
+const chalk = require(`chalk`);
 
 const Cli = {
   [generate.name]: generate,
