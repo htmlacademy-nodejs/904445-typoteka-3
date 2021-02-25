@@ -28,7 +28,7 @@ const onClientConnect = async (req, res) => {
       sendResponse(res, HttpCode.NOT_FOUND, notFoundMessageText);
       break;
   }
-}
+};
 
 const sendResponse = (res, statusCode, message) => {
   const template = `
@@ -50,7 +50,7 @@ const sendResponse = (res, statusCode, message) => {
 
 module.exports = {
   name: `--server`,
-  run (args) {
+  run(args) {
     const [customPort] = args;
     const port = Number.parseInt(customPort, 10) || DEFAULT_PORT;
 
@@ -61,6 +61,6 @@ module.exports = {
           return console.error(`Ошибка при создании сервера`, err);
         }
         return console.info(chalk.green(`Ожидаю соединений на ${port}`));
-      })
+      });
   }
-}
+};
